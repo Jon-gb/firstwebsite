@@ -13,7 +13,8 @@ const determineWinner = (p1, p2) => {
   else return p2 > p1 ? "Player wins!" : "CPU wins!";
 };
 
-let player = choices.findIndex((index) => index === getPlayerInput());
+let playerChoice = getPlayerInput();
+let player = choices.findIndex((index) => index === playerChoice);
 let cpu = Math.floor(Math.random() * 3);
 let winner = determineWinner(player, cpu);
 
